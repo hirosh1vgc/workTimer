@@ -4,9 +4,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset=UTF-8">
+	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>勤務記録表示</title>
+	<link rel="stylesheet" href="css/admin.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
 	 rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
@@ -15,16 +16,16 @@
 <c:choose>
 	<c:when test="${!empty memoryuser }">
 		<c:set var="userid" value="${memoryuser.userId }" />
-		<h3>${memoryuser.userName }さん（ログインID: ${memoryuser.loginId }）の、${memorymonth.smonth }の勤務記録一覧を表示します。</h3>
+		<h5>${memoryuser.userName }さん（ログインID: ${memoryuser.loginId }）の、${memorymonth.smonth }の勤務記録一覧を表示します。</h5>
 	</c:when>
 	<c:otherwise>
 		<c:set var="userid" value="${account.userId }" />
-		<h3>${account.userName }さん（ログインID: ${account.loginId }）の、${memorymonth.smonth }の勤務記録一覧を表示します。</h3>
+		<h5>${account.userName }さん（ログインID: ${account.loginId }）の、${memorymonth.smonth }の勤務記録一覧を表示します。</h5>
 	</c:otherwise>
 </c:choose>
 
 <div class="table-responsive">
-<table class="table caption-top" style="width : 70%; margin-left : 2em" >
+<table class="table caption-top">
 	<caption>通常勤務時間: 「${wd.wakeup }」～「${wd.sleep }」・休憩時間「${wd.rest }分」</caption>
  	<thead>
 		<tr class="table-active">

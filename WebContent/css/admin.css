@@ -1,0 +1,12 @@
+a {
+	margin-left: 2pc;
+}
+
+.table-responsive {
+	width: 90%;
+	margin-left: 2pc;
+}
+
+.work {
+	display: flex;
+}

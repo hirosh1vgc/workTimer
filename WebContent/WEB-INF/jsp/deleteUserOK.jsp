@@ -8,8 +8,9 @@
 	<title>workTimer</title>
 </head>
 <body>
+<h1>workTimer</h1>
 	<p>削除に成功しました。</p>
-	<a href="/workTimer/AdminMainServlet">ユーザー管理画面に戻る</a>
-	<a href="/workTimer/LogoutServlet">ログアウト</a><br>
+	<a href="/workTimer/AdminMainServlet">ユーザー管理画面に戻る</a><br>
+	<a href="/workTimer/LogoutServlet">ログアウト</a>
 </body>
 </html>

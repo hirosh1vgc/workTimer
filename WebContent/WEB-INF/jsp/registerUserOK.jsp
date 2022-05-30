@@ -9,6 +9,7 @@
 </head>
 <body>
 <h1>新規ユーザー登録完了</h1>
+<h1>workTimer</h1>
 <p>新規ユーザーの登録が完了しました。</p>
 
 <a href="/workTimer/AdminMainServlet">管理者用メインページへ</a><br>

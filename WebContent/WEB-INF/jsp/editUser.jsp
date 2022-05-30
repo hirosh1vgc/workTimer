@@ -14,6 +14,7 @@
 	 rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
 <body>
+<h1>workTimer</h1>
 <p>ログインユーザーID: <%=editUser.getVLoginId() %>さん(在籍状況: <%=editUser.getVEnrollmentLv() %>)の情報を編集します。</p>
 
 <c:if test="${errorMsg.length()>0}">

@@ -3,12 +3,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>workTimer</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>workTimer</title>
 </head>
 <body>
-<p>削除に成功しました。</p>
-<a href="/workTimer/AdminMainServlet">ユーザー管理画面に戻る</a>
-<a href="/workTimer/LogoutServlet">ログアウト</a><br>
+	<p>削除に成功しました。</p>
+	<a href="/workTimer/AdminMainServlet">ユーザー管理画面に戻る</a>
+	<a href="/workTimer/LogoutServlet">ログアウト</a><br>
 </body>
 </html>

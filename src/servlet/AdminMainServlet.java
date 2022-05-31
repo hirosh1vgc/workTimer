@@ -28,6 +28,8 @@ public class AdminMainServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		HttpSession session = request.getSession();
 
+		session.removeAttribute("scMsg");
+
 		// ログインセッションの有無チェック
 		User account = (User)session.getAttribute("account");
 		if (account == null) {

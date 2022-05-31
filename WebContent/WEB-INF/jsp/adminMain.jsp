@@ -13,11 +13,12 @@
 </head>
 <body>
 	<h1>workTimer</h1>
+	<h3>ようこそ、${account.userName }さん（ログインID: ${account.loginId }）</h3>
 	<c:if test="${scMsg.length()>0}">
 		<p style="color : blue;">${scMsg }<br></p>
 	</c:if>
 	<div class="work">
-		<a href="/workTimer/TimerMainServlet">勤怠記録へ</a>
+		<a href="/workTimer/TimerMainServlet">勤怠管理</a>
 		<ul style="list-style-type: none">
 			<li>通常勤務時間: 「${wd.wakeup }」～「${wd.sleep }」</li>
 			<li>休憩時間「${wd.rest }分」</li>

@@ -21,15 +21,16 @@
 		<form action="/workTimer/UserMainServlet" method="post">
 			<input type="hidden" name="userid" value="${memoryuser.userId }">
 			<input type="hidden" name="action" value="adminMemory">
-			<div class="mb-3">
+			<div class="mb-3" style="margin-left: 2pc;">
 				<label for="monthSelect" class="form-label">過去の勤務年月を選択</label>
-				<select class="form-select" name="monthSelect" style="width : 9em" required>
+				<select class="form-select" name="monthSelect"  style="width: 9pc" required>
 					<c:forEach var="item" items="${vmonths }">
 						<option value="${item.workDay }">${item.smonth }</option>
 					</c:forEach>
 				</select>
+				<button class="btn btn-primary" type="submit" style="margin-top: 1pc;">検索</button>
 			</div>
-			<button class="btn btn-primary" type="submit">検索</button>
+
 		</form>
 	</c:when>
 	<c:otherwise>ユーザー名「${memoryuser.userName }」の過去の勤務履歴はありません。<br></c:otherwise>

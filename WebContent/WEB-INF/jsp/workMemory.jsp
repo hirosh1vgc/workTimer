@@ -7,7 +7,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>勤務記録表示</title>
-	<link rel="stylesheet" href="css/admin.css">
+	<link rel="stylesheet" type="text/css" href="css/admin.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
 	 rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 </head>
@@ -57,17 +57,19 @@
 </ul>
 
 <form action="/workTimer/csvExportServlet" method="post">
-	<input type="submit" class="btn btn-primary" value="CSVダウンロード">
+	<input type="submit" class="btn btn-light" value="CSV出力" style="margin-left: 2pc;">
 	<input type= "hidden" name="userid" value="<c:out value='${userid }' />">
 </form>
 
-<c:if test="${account.userLv == 1 }">
-	<a href="/workTimer/UserMainServlet">ユーザーメイン画面へ戻る</a><br>
-</c:if>
-<c:if test="${account.userLv == 2 }">
-	<a href="/workTimer/AdminMainServlet">管理者メイン画面へ戻る</a><br>
-</c:if>
+<div class="a">
+	<c:if test="${account.userLv == 1 }">
+		<a href="/workTimer/UserMainServlet">ユーザーメイン画面へ戻る</a><br>
+	</c:if>
+	<c:if test="${account.userLv == 2 }">
+		<a href="/workTimer/AdminMainServlet">管理者メイン画面へ戻る</a><br>
+	</c:if>
 <a href="/workTimer/LogoutServlet">ログアウト</a>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
  integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">

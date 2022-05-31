@@ -1,9 +1,8 @@
-.form {
-    width : 25%;
-    text-align : left;
-    padding-left : 2em
+.form-control {
+    width : 20pc;
+    padding-left : 2pc;
 }
 
 .btn {
-	margin-top: 1em
+	margin-top: 1pc;
 }

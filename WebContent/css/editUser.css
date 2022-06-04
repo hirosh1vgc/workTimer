@@ -1,0 +1,17 @@
+#form, a {
+	 margin-left: 2pc;
+}
+
+.button {
+	margin-top: 1pc;
+	margin-bottom: 1pc
+}
+
+.buttons {
+	margin-left: 2pc;
+	margin-bottom: 1pc;
+}
+
+ul {
+	 list-style-type: none
+}

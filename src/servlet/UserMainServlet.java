@@ -115,10 +115,14 @@ public class UserMainServlet extends HttpServlet {
 		for (V_Timer vt : wMemory) {
 			LocalTime start = LocalTime.parse(vt.getWorkStart());
 			LocalTime stop = LocalTime.parse(vt.getWorkStop());
+
 			// 勤務時間計算
 			Duration length = Duration.between(start, stop);
 			Duration work_length = length.minusMinutes(rest);
-			total_work = total_work.plus(work_length);
+			if (!work_length.isNegative()) {
+				total_work = total_work.plus(work_length);
+			}
+
 			int wh = length.toHoursPart();
 			int wm = length.toMinutesPart();
 			System.out.println(vt.getWorkDay() +"の勤務時間: "+ wh +"時間"+ wm +"分");

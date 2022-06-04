@@ -149,15 +149,19 @@ public class TimerMainServlet extends HttpServlet {
 				String sccessMsg = today +"の勤務が開始しました。勤務を終了する場合は勤怠管理をクリックしてください。";
 				session.setAttribute("scMsg", sccessMsg);
 
-				if (userlv == 1) {
-					String path = "/WEB-INF/jsp/userMain.jsp";
-					RequestDispatcher dispatcher = request.getRequestDispatcher(path);
-					dispatcher.forward(request, response);
-				} else if (userlv == 2) {
-					String path = "/WEB-INF/jsp/adminMain.jsp";
-					RequestDispatcher dispatcher = request.getRequestDispatcher(path);
-					dispatcher.forward(request, response);
-				}
+				String path = "/WEB-INF/jsp/workStop.jsp";
+				RequestDispatcher dispatcher = request.getRequestDispatcher(path);
+				dispatcher.forward(request, response);
+
+//				if (userlv == 1) {
+//					String path = "/WEB-INF/jsp/userMain.jsp";
+//					RequestDispatcher dispatcher = request.getRequestDispatcher(path);
+//					dispatcher.forward(request, response);
+//				} else if (userlv == 2) {
+//					String path = "/WEB-INF/jsp/adminMain.jsp";
+//					RequestDispatcher dispatcher = request.getRequestDispatcher(path);
+//					dispatcher.forward(request, response);
+//				}
 
 			}
 

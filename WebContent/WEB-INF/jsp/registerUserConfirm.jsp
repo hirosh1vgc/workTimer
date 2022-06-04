@@ -14,8 +14,8 @@
 <h1>workTimer</h1>
 <p>以下の内容で新規ユーザーを登録します。よろしいですか？</p>
 
-<form action="/workTimer/UserRegisterServlet" method="post">
-	<input type="hidden" name="action" value="Register">
+	<form action="/workTimer/UserRegisterServlet" method="post">
+		<input type="hidden" name="action" value="Register">
 		<ul style="list-style-type: none">
 			<li>ユーザーID: ${user.getLoginId() }</li>
 			<li>パスワード: ${user.getPassword() }</li>
@@ -27,11 +27,15 @@
 				</c:choose>」
 			</li>
 		</ul>
-	<input type="submit" class="btn btn-primary" value="確定">
-</form>
+		<div class="button mb-3" style="margin-left: 2pc">
+			<button class="btn btn-primary" type="submit">確定</button>
+		</div>
+	</form>
 
-<a href="/workTimer/UserRegisterServlet">入力へ戻る</a><br>
-<a href="/workTimer/LogoutServlet">ログアウト</a>
+	<div class="a"  style="margin-left: 2pc">
+		<a href="/workTimer/UserRegisterServlet">入力へ戻る</a><br>
+		<a href="/workTimer/LogoutServlet">ログアウト</a>
+	</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
  integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">

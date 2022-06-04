@@ -72,7 +72,7 @@ public class V_TimerDAO {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection conn = DriverManager.getConnection(PATH, USER, PASS);
 			// SELECT文を準備
-			String sql = "select work_day from v_timer where user_id = ?  group by date_format(work_day, '%c');";
+			String sql = "select work_day from v_timer where user_id = ?  group by date_format(work_day, '%c') order by work_day desc;";
 
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			pStmt.setInt(1, user_id);
